@@ -3,11 +3,11 @@ I'd definitely write a differrent html that would lead me to a way more efficien
 Also, I just hooked it to wp_footer to make it show on all blog posts regardless of the theme. There's no universal "after_content" hook that all themes have so I went for wp_footer.
 Of course, way better solution was to put the entire html in variable and append it to $content then use a filter. Something like this:
 
-function additional_content($content) {
-        $additional_content = //entire html here
-        $content .= $additional_content;
-        return $content;
-}
+function additional_content($content) {<br>
+        $additional_content = //entire html here <br>
+        $content .= $additional_content;<br>
+        return $content;<br>
+}<br>
 add_filter('the_content', 'additional_content');
 
 Even this is not perfect because I worked on multiple websites where content area is completely disabled and the_content(); isn't even included in the post/page template so the application would depend on the theme used in a specific website.
