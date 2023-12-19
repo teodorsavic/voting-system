@@ -1,0 +1,107 @@
+#voting-section button.voted, #voting-results .voted {
+	border: 2px solid blue;
+	padding: 6px 6px 6px 30px;
+	font-weight: 300;
+	position: relative;
+	border-radius: 4px;
+}
+#voting-section {
+	margin: 40px;
+	background: #fff;
+	border: 2px dotted purple;
+	padding: 20px;	
+	display: inline-block;
+	border-radius: 6px;
+}
+
+#voting-section button {
+	padding: 4px 30px;
+	margin: 6px;
+	cursor: pointer;
+	border: 1px solid gray;
+	position: relative;
+	border-radius: 4px;
+}
+#voting-section span.question {
+	font-weight: bold;
+}
+#voting-results {
+	margin-top: 10px;
+}
+#voting-results span {
+	padding: 6px 10px;
+}
+#voting-results span.thank-you {
+	padding: 6px 0;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+
+.voting-box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	flex-direction: column;
+}
+.voting-box p {
+	margin: 0;
+	color: #000;
+	font-weight: bold;
+}
+.voting-row {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+button#vote-yes:before {
+	content: '';
+	background-image: url(/wp-content/plugins/voting-system/images/face-smile-beam-solid.svg);
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	filter: opacity(0.3);
+}
+button#vote-no:before {
+	content: '';
+	background-image: url(/wp-content/plugins/voting-system/images/face-meh-solid.svg);
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	filter: opacity(0.3);
+}
+#voting-results .voted:before {
+	content: '';
+	background-image: url(/wp-content/plugins/voting-system/images/face-smile-beam-solid.svg);
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	filter: opacity(0.3);
+	filter: brightness(0) saturate(100%) invert(11%) sepia(100%) saturate(4649%) hue-rotate(244deg) brightness(99%) contrast(156%);
+}
+#voting-results .voted.no:before {
+	content: '';
+	background-image: url(/wp-content/plugins/voting-system/images/face-meh-solid.svg);
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	filter: opacity(0.3);
+	filter: brightness(0) saturate(100%) invert(11%) sepia(100%) saturate(4649%) hue-rotate(244deg) brightness(99%) contrast(156%);
+}
