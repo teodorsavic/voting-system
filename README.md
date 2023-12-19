@@ -4,7 +4,7 @@ Also, I just hooked it to wp_footer to make it show on all blog posts regardless
 Of course, way better solution was to put the entire html in variable and append it to $content then use a filter. Something like this:
 
 function additional_content($content) {
-        $additional_content = '<div class="something">ENTIRE HTML HERE</div>';
+        $additional_content = //entire html here
         $content .= $additional_content;
         return $content;
 }
